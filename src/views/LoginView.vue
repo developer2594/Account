@@ -75,6 +75,7 @@ import messages from "@/utils/messages";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default {
+  //name: 'login';
   setup() {
     return { v$: useVuelidate() };
   },
@@ -114,7 +115,7 @@ export default {
   },
 
   methods: {
-    submitHandler() {
+    async submitHandler() {
       signInWithEmailAndPassword(this.auth, this.form.email, this.form.password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -125,6 +126,18 @@ export default {
           const errorHTML = `<span style="color: yellow; text-transform: uppercase;">USER not found</span>`;
           M.toast({ html: errorHTML });
         });
+      // ===========
+      const formData = {
+        email: this.form.email,
+        password: this.form.password,
+      };
+      try {
+        await this.$store.dispatch("login", formData);
+      } catch (e) {
+        console.log(e);
+      }
+
+      // ============
     },
   },
 };
