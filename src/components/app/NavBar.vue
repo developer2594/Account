@@ -16,7 +16,7 @@
             data-target="dropdown1"
             ref="dropdown"
           >
-            USER NAME
+            name:
             <i class="material-icons right">arrow_drop_down</i>
           </a>
 
@@ -42,12 +42,15 @@
 <script>
 import M from "materialize-css/dist/js/materialize.min";
 import formatDateMixin from "@/mixins/FormatDate";
+import { getAuth, signOut } from "firebase/auth";
+
 export default {
   data: () => ({
     date: new Date(),
     interval: null,
     dropdown: null,
     format: "",
+    auth: getAuth(),
   }),
   mounted() {
     this.interaval = setInterval(() => {
@@ -61,6 +64,10 @@ export default {
   mixins: [formatDateMixin],
 
   computed: {
+    // name() {
+    //   console.log("name", this.$store.getters.info.email);
+    //   return this.$store.getters.info.name;
+    // },
     formattedDate() {
       return this.formatDate(this.date).replace(",", "");
     },
@@ -68,6 +75,7 @@ export default {
 
   methods: {
     logout() {
+      signOut(this.auth);
       console.log("logout");
       this.$router.push("/login?message=logout");
     },

@@ -9,8 +9,9 @@ import "materialize-css/dist/js/materialize.min";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import "firebase/app";
+import "firebase/database";
 
-const firebaseConfig = {
+const app = initializeApp({
   apiKey: "AIzaSyC_07fcCspedsLJZJqeVSVdOT0oNuV1378",
   authDomain: "vladilen-vue-88f26.firebaseapp.com",
   projectId: "vladilen-vue-88f26",
@@ -18,8 +19,7 @@ const firebaseConfig = {
   messagingSenderId: "82177084303",
   appId: "1:82177084303:web:ab1d6597bf944f2b7d19fa",
   measurementId: "G-F61LER97WE",
-};
-const app = initializeApp(firebaseConfig);
+});
 const auth = getAuth(app);
 
 createApp(App).use(auth).use(vuelidate).use(store).use(router).mount("#app");
