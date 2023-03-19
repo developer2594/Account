@@ -1,15 +1,19 @@
 <template>
   <div class="home">
     <h2>Home</h2>
+    <Zlatmax />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Zlatmax from "@/components/Zlatmax";
 
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    Zlatmax,
+  },
 };
 </script>
 
