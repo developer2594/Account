@@ -1,10 +1,17 @@
 <template>
+  <Header msg="Welcome to Your Vue.js App" />
   <router-view />
+  <Footer />
 </template>
 
 <script>
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 export default {
-  components: {},
+  components: {
+    Header,
+    Footer,
+  },
 };
 </script>
 
@@ -79,5 +86,9 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+//========================================================================================================================================================
+.container {
+  border: 1px solid green;
 }
 </style>

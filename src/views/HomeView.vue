@@ -1,20 +1,23 @@
 <template>
   <div class="home">
-    <Header msg="Welcome to Your Vue.js App" />
-    <Footer />
+    <h2>Home</h2>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 
 export default {
   name: "HomeView",
-  components: {
-    Header,
-    Footer,
-  },
+  components: {},
 };
 </script>
+
+<style scoped>
+.home {
+  min-height: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: auto 1fr auto;
+}
+</style>

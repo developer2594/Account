@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="header__container">
+    <div class="container">
       <div class="header__logo">image</div>
       <div data-da=".menu-header__body, 768" class="header__menu menu-header">
         <ul class="menu-header__list">
@@ -38,10 +38,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .header {
-  &__container {
-    border: 1px solid red;
-    display: flex;
-  }
+}
+.container {
+  display: flex;
 }
 
 .menu-header {
