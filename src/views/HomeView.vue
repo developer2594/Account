@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <h2>Home</h2>
+    <div class="container">Home</div>
     <Zlatmax />
+    <Relvase />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Zlatmax from "@/components/Zlatmax";
+import Relvase from "@/components/Relvase";
 
 export default {
   name: "HomeView",
   components: {
     Zlatmax,
+    Relvase,
   },
 };
 </script>
