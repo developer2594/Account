@@ -7,7 +7,6 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import "@/base/scripts/app";
 export default {
   components: {
     Header,
@@ -17,11 +16,9 @@ export default {
 </script>
 
 <style lang="scss">
-//========================================================================================================================================================
 #app {
   display: grid;
   overflow: hidden;
-  border: 1px solid red;
 }
 .container {
   position: relative;
