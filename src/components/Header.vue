@@ -39,20 +39,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .header {
-  min-width: 100%;
-  overflow: hidden;
   background-color: #f2f2f2;
   &__menu {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-left: 10px;
+    margin-left: 0.8rem;
   }
   &__logo {
     position: relative;
     display: flex;
-    width: 45px;
-    height: 45px;
+    width: 2.6rem;
+    height: 2.6rem;
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #074d94;
@@ -78,12 +76,12 @@ export default {
   }
 }
 .container {
-  padding: 15px 15px;
+  padding: 1rem;
   @media (max-width: 767px) {
-    padding: 10px 15px;
+    padding: 0.8rem 1rem;
   }
   @media (max-width: 767px) {
-    padding: 8px 10px;
+    padding: 0.5rem 0.8rem;
   }
 }
 
