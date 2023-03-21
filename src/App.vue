@@ -88,7 +88,17 @@ h6 {
   font-size: inherit;
 }
 //========================================================================================================================================================
+#app {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid red;
+}
 .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
   border: 1px solid green;
 }
 </style>
