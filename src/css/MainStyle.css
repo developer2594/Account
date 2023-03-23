@@ -786,7 +786,8 @@ body {
   .header__menu {
     position: absolute;
     flex-direction: column;
-    right: 120%;
+    right: 200px;
+    /* right: 120%; */
     top: 0;
     padding: 15px;
     font-size: 1.5rem;
@@ -794,7 +795,8 @@ body {
     background-color: #fff;
     border: 1px solid red;
   }
-  .open .header__menu {
+  .header__menu .open {
+    border: 1px solid green;
   }
   .hystmodal__close {
     top: 10px;

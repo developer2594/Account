@@ -4,6 +4,9 @@
 
 <script>
 export default {
+  data: () => ({
+    menuOpen: false,
+  }),
   components: {},
 };
 </script>

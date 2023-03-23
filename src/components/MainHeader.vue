@@ -18,7 +18,7 @@
           </li>
         </ul>
       </div>
-      <div @click="open" class="header__icon-menu icon-menu">
+      <div @click.prevent="$emit('open')" class="header__icon-menu icon-menu">
         <span></span>
       </div>
     </div>
@@ -32,18 +32,14 @@
 
 <script>
 export default {
-  data() {
-    return {
-      menu: [
-        { item: "Контакты", url: "" },
-        { item: "К портфолию", url: "" },
-        { item: "en", url: "" },
-      ],
-      menuOpen: true,
-    };
-  },
-  methods: {
-    open() {},
-  },
+  name: "main-header",
+  data: () => ({
+    menu: [
+      { item: "Контакты", url: "" },
+      { item: "К портфолию", url: "" },
+      { item: "en", url: "" },
+    ],
+  }),
+  methods: {},
 };
 </script>
