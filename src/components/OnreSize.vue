@@ -1,12 +1,6 @@
-<template>
-  <router-view />
-  <div>{{ width }}</div>
-</template>
-
 <script>
 export default {
   data: () => ({
-    menuOpen: false,
     width: 0,
   }),
   components: {},
@@ -21,5 +15,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss"></style>

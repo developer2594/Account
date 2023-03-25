@@ -1,17 +1,16 @@
 <template>
-  <MainHeader @open="menuOpen = !menuOpen" />
+  <HomeHeader />
+  <HomeMain />
 </template>
 
-<!-- <style src="../css/MainStyle.min.css"></style> -->
-
 <script>
-import MainHeader from "@/components/MainHeader";
+import HomeHeader from "@/components/HomeHeader";
+import HomeMain from "@/components/HomeMain";
 export default {
-  data: () => ({
-    menuOpen: true,
-  }),
+  data: () => ({}),
   components: {
-    MainHeader,
+    HomeHeader,
+    HomeMain,
   },
 };
 </script>
