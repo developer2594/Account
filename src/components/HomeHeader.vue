@@ -1,24 +1,18 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <div class="header__logo header__image-ibg">
-        <img src="@/assets/home/header/df.png" alt="logo" />
-      </div>
+      <HeaderIcon :img="logo.img" :alt="logo.alt" />
       <div :class="{ open: open }" class="header__menu menu-header">
         <ul class="menu-header__list">
-          <li
+          <HeaderMenu
             v-for="i in menu"
             :key="i.item"
-            data-popup="#massageName"
-            class="menu-header__item"
-          >
-            <router-link to="#" class="menu-header__link">{{
-              i.item
-            }}</router-link>
-          </li>
+            :item="i.item"
+            :url="i.url"
+          />
         </ul>
       </div>
-      <BurgerComp @click="open = !open" :color="red" />
+      <BurgerComp @click="open = !open" />
     </div>
     <div class="header__circle">
       <img src="@/assets/home/header/Ellipse.png" alt="Ellipse" />
@@ -106,23 +100,13 @@
       flex-direction: column;
     }
   }
-
-  // .menu-header__link
-
-  &__link {
-    &:hover {
-      text-decoration: underline;
-      color: #49ad09;
-      -webkit-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s;
-    }
-  }
 }
 </style>
 
 <script>
 import BurgerComp from "@/components/BurgerComp.vue";
+import HeaderMenu from "@/components/HeaderMenu.vue";
+import HeaderIcon from "@/components/HeaderIcon.vue";
 export default {
   name: "main-header",
   data: () => ({
@@ -132,9 +116,15 @@ export default {
       { item: "К портфолию", url: "" },
       { item: "en", url: "" },
     ],
+    logo: {
+      img: 'src="@/assets/home/header/df.png"',
+      alt: "alt='logo'",
+    },
   }),
   components: {
     BurgerComp,
+    HeaderMenu,
+    HeaderIcon,
   },
 };
 </script>
