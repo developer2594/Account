@@ -1,6 +1,14 @@
 <template>
-  <div @click="$emit('click')" class="header__icon-menu icon-menu">
-    <span></span>
+  <div
+    @click="$emit('click')"
+    :style="{
+      width: width,
+      height: height,
+      border: border,
+    }"
+    class="header__icon-menu icon-menu"
+  >
+    <span :style="{ height: spanHeight, backgroundColor: color }"></span>
   </div>
 </template>
 
@@ -11,8 +19,6 @@
   @media (max-width: $mobile) {
     display: block;
     position: relative;
-    width: 30px;
-    height: 18px;
     cursor: pointer;
     z-index: 5;
     span,
@@ -23,8 +29,8 @@
       left: 0px;
       position: absolute;
       width: 100%;
-      height: 2px;
-      background-color: #000;
+      // height: 2px;
+      // background-color: #000;
     }
     &::before {
       top: 0px;
@@ -55,10 +61,43 @@
 <script>
 export default {
   emits: ["click"],
+  props: {
+    color: {
+      type: String,
+      required: true,
+      default: "#000",
+    },
+    width: {
+      type: String,
+      required: true,
+      default: "30px",
+    },
+    height: {
+      type: String,
+      required: true,
+      default: "18px",
+    },
+    spanHeight: {
+      type: String,
+      required: true,
+      default: "2px",
+    },
+    border: {
+      type: String,
+      required: true,
+      default: "1px dashed red",
+    },
+  },
   data: () => ({
-    color: "",
+    // color: "",
   }),
   computed() {},
-  mounted() {},
+  mounted() {
+    console.log("props", this.color);
+    console.log("props", this.width);
+    console.log("props", this.height);
+    console.log("spanHeight", this.spanHeight);
+    console.log("props", this.border);
+  },
 };
 </script>

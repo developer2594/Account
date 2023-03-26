@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <HeaderIcon :img="logo.img" :alt="logo.alt" />
+      <div class="header__logo header__image-ibg">
+        <img src="@/assets/home/header/df.png" alt="logo" />
+      </div>
       <div :class="{ open: open }" class="header__menu menu-header">
         <ul class="menu-header__list">
           <HeaderMenu
@@ -12,7 +14,14 @@
           />
         </ul>
       </div>
-      <BurgerComp @click="open = !open" />
+      <BurgerComp
+        @click="open = !open"
+        :color="burger.color"
+        :width="burger.width"
+        :height="burger.height"
+        :spanHeight="burger.spanHeight"
+        :border="burger.border"
+      />
     </div>
     <div class="header__circle">
       <img src="@/assets/home/header/Ellipse.png" alt="Ellipse" />
@@ -106,7 +115,6 @@
 <script>
 import BurgerComp from "@/components/BurgerComp.vue";
 import HeaderMenu from "@/components/HeaderMenu.vue";
-import HeaderIcon from "@/components/HeaderIcon.vue";
 export default {
   name: "main-header",
   data: () => ({
@@ -116,15 +124,17 @@ export default {
       { item: "К портфолию", url: "" },
       { item: "en", url: "" },
     ],
-    logo: {
-      img: 'src="@/assets/home/header/df.png"',
-      alt: "alt='logo'",
+    burger: {
+      color: "#000",
+      width: "30px",
+      height: "18px",
+      spanHeight: "2px",
+      border: "1px solid red",
     },
   }),
   components: {
     BurgerComp,
     HeaderMenu,
-    HeaderIcon,
   },
 };
 </script>
