@@ -4,6 +4,7 @@
       <div class="header__logo header__image-ibg">
         <img src="@/assets/home/header/df.png" alt="logo" />
       </div>
+      <div>{{ ScrinWidth }}</div>
       <div :class="{ open: open }" class="header__menu menu-header">
         <ul class="menu-header__list">
           <HeaderMenu
@@ -11,6 +12,7 @@
             :key="i.item"
             :item="i.item"
             :url="i.url"
+            :ScrinWidth="ScrinWidth"
           />
         </ul>
       </div>
@@ -20,7 +22,6 @@
         :width="burger.width"
         :height="burger.height"
         :spanHeight="burger.spanHeight"
-        :border="burger.border"
       />
     </div>
     <div class="header__circle">
@@ -71,6 +72,7 @@
   &__menu {
     @media all and (max-width: $mobile) {
       position: absolute;
+      z-index: 5;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -116,7 +118,12 @@
 import BurgerComp from "@/components/BurgerComp.vue";
 import HeaderMenu from "@/components/HeaderMenu.vue";
 export default {
-  name: "main-header",
+  props: {
+    ScrinWidth: {
+      type: Number,
+    },
+  },
+  name: "home-header",
   data: () => ({
     open: false,
     menu: [
@@ -129,7 +136,6 @@ export default {
       width: "30px",
       height: "18px",
       spanHeight: "2px",
-      border: "1px solid red",
     },
   }),
   components: {

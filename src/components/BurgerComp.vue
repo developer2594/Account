@@ -4,11 +4,10 @@
     :style="{
       width: width,
       height: height,
-      border: border,
     }"
     class="header__icon-menu icon-menu"
   >
-    <span :style="{ height: spanHeight, backgroundColor: color }"></span>
+    <span></span>
   </div>
 </template>
 
@@ -29,8 +28,8 @@
       left: 0px;
       position: absolute;
       width: 100%;
-      // height: 2px;
-      // background-color: #000;
+      height: v-bind("spanHeight");
+      background-color: v-bind("color");
     }
     &::before {
       top: 0px;
@@ -82,22 +81,6 @@ export default {
       required: true,
       default: "2px",
     },
-    border: {
-      type: String,
-      required: true,
-      default: "1px dashed red",
-    },
-  },
-  data: () => ({
-    // color: "",
-  }),
-  computed() {},
-  mounted() {
-    console.log("props", this.color);
-    console.log("props", this.width);
-    console.log("props", this.height);
-    console.log("spanHeight", this.spanHeight);
-    console.log("props", this.border);
   },
 };
 </script>

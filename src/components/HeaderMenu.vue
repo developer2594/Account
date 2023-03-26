@@ -9,11 +9,9 @@
   // .menu-header__link
 
   &__link {
-    l &:hover {
+    &:hover {
       text-decoration: underline;
       color: #49ad09;
-      -webkit-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s;
     }
   }
@@ -30,6 +28,9 @@ export default {
     url: {
       type: String,
       required: true,
+    },
+    ScrinWidth: {
+      type: Number,
     },
   },
 };

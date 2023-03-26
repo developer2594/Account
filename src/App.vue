@@ -1,13 +1,12 @@
 <template>
-  <router-view />
-  <div>{{ width }}</div>
+  <router-view :ScrinWidth="ScrinWidth" />
 </template>
 
 <script>
 export default {
   data: () => ({
     menuOpen: false,
-    width: 0,
+    ScrinWidth: 0,
   }),
   components: {},
   created() {
@@ -16,7 +15,7 @@ export default {
   },
   methods: {
     onResize() {
-      this.width = window.innerWidth;
+      this.ScrinWidth = window.innerWidth;
     },
   },
 };
