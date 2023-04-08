@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/scss/variables.scss";
+@import "@/scss/style.scss";
 .icon-menu {
   display: none;
   @media (max-width: $mobile) {

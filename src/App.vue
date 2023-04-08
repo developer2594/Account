@@ -6,7 +6,9 @@
 export default {
   data: () => ({
     menuOpen: false,
-    ScrinWidth: 0,
+    ScrinWidth: {
+      type: String,
+    },
   }),
   components: {},
   created() {

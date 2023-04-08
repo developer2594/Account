@@ -31,13 +31,15 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/scss/variables.scss";
+@import "@/scss/style.scss";
 .header {
   position: relative;
   background-color: $headerBG;
   z-index: 5;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  @include adaptiveValue("padding-top", 20, 5);
+  @include adaptiveValue("padding-bottom", 20, 5);
+  border: 1px solid green;
+
   // .header__container
 
   &__container {
@@ -45,8 +47,8 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Gilroy-Bold";
-    font-size: 1.125rem;
-    line-height: 1.1666666667;
+    font-size: rem(18);
+    line-height: 1.3em;
   }
 
   // .header__logo
@@ -98,6 +100,10 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+    @media (max-width: $mobile) {
+      bottom: 20%;
+      right: -4%;
+    }
   }
 }
 .menu-header {

@@ -1,0 +1,35 @@
+/*
+ (i) Стили будут применяться ко 
+ всем классам содержащим *__container
+ Например header__container, main__container и т.д.
+ Снипет (HTML): cnt
+ */
+
+// [class*="__container"] {
+//   max-width: $maxWidthContainer;
+//   box-sizing: content-box;
+//   margin: 0 auto;
+//   //   padding: 0 0.9375rem;
+//   border: 1px solid red;
+// }
+/* styles ibg */
+[class*="__image-ibg"] {
+  position: relative;
+}
+
+[class*="__image-ibg"] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-flex;
+  padding: 0px 0px;
+  background-color: #49ad09;
+  color: #fff;
+  border-radius: 5px;
+}
