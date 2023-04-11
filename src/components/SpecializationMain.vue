@@ -29,7 +29,7 @@ export default {
   data: () => ({
     icons: [
       { alt: "figma", path: "@/assets/home/spec/figma.svg" },
-      { alt: "2", path: "@/assets/home/header/df.png" },
+      { alt: "2", path: "@/assets/home/spec/df.png" },
       { alt: "psd", path: "/assets/home/spec/psd.svg" },
       { alt: "xd", path: "/assets/home/spec/xd.svg" },
       { alt: "html", path: "/assets/home/spec/html.svg" },
@@ -37,7 +37,7 @@ export default {
       { alt: "sass", path: "/assets/home/spec/sass.svg" },
       { alt: "js", path: "/assets/home/spec/js.svg" },
     ],
-    components: { IconsComp },
   }),
+  components: { IconsComp },
 };
 </script>
