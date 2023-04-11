@@ -1,17 +1,12 @@
 <template>
   <div class="special">
     <div class="container">
-      <div class="spec-whats">Что мы делаем?</div>
-      <h2 class="spec-title">Наша специализация</h2>
-      <div class="spec-technologi">
-        <div class="technologi__title">Вёрстка сайтов</div>
-        <div class="technologi__icons">
-          <IconsComp
-            v-for="i in icons"
-            :key="i.icon"
-            :icon="i.icon"
-            :path="i.path"
-          />
+      <div class="special-whats">Что мы делаем?</div>
+      <h2 class="special-title">Наша специализация</h2>
+      <div class="special-technologi technologi-special">
+        <div class="technologi-special__title">Вёрстка сайтов</div>
+        <div class="technologi-special__icons">
+          <IconsComp v-for="icon in icons" :key="icon.id" :specIcon="icon" />
         </div>
       </div>
     </div>
@@ -25,15 +20,43 @@ import IconsComp from "@/components/HomeSpecIcon.vue";
 export default {
   data: () => ({
     icons: [
-      { icon: "figma", path: "1" },
-      { icon: "ps", path: "2" },
-      { icon: "xd", path: "3" },
-      { icon: "html", path: "4" },
-      { icon: "css", path: "5" },
-      { icon: "sass", path: "6" },
-      { icon: "js", path: "7" },
+      {
+        id: "ic1",
+        name: "figma.svg",
+        alt: "icon figma",
+      },
+      {
+        id: "ic2",
+        name: "psd.svg",
+        alt: "icon psd",
+      },
+      {
+        id: "ic3",
+        name: "xd.svg",
+        alt: "icon xd",
+      },
+      {
+        id: "ic4",
+        name: "html.svg",
+        alt: "icon html",
+      },
+      {
+        id: "ic5",
+        name: "css.svg",
+        alt: "icon css",
+      },
+      {
+        id: "ic6",
+        name: "sass.svg",
+        alt: "icon sass",
+      },
+      {
+        id: "ic7",
+        name: "js.svg",
+        alt: "icon js",
+      },
     ],
-    components: { IconsComp },
   }),
+  components: { IconsComp },
 };
 </script>
