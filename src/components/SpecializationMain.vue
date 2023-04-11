@@ -9,9 +9,12 @@
           <IconsComp
             v-for="i in icons"
             :key="i.icon"
-            :icon="i.icon"
+            :alt="i.alt"
             :path="i.path"
           />
+          <!-- <div v-for="i in icons" :key="i" class="technologi__icon">
+            <img src="@/assets/home/spec/figma.svg" :alt="i.alt" />
+          </div> -->
         </div>
       </div>
     </div>
@@ -25,13 +28,14 @@ import IconsComp from "@/components/HomeSpecIcon.vue";
 export default {
   data: () => ({
     icons: [
-      { icon: "figma", path: "1" },
-      { icon: "ps", path: "2" },
-      { icon: "xd", path: "3" },
-      { icon: "html", path: "4" },
-      { icon: "css", path: "5" },
-      { icon: "sass", path: "6" },
-      { icon: "js", path: "7" },
+      { alt: "figma", path: "@/assets/home/spec/figma.svg" },
+      { alt: "2", path: "@/assets/home/header/df.png" },
+      { alt: "psd", path: "/assets/home/spec/psd.svg" },
+      { alt: "xd", path: "/assets/home/spec/xd.svg" },
+      { alt: "html", path: "/assets/home/spec/html.svg" },
+      { alt: "css", path: "/assets/home/spec/css.svg" },
+      { alt: "sass", path: "/assets/home/spec/sass.svg" },
+      { alt: "js", path: "/assets/home/spec/js.svg" },
     ],
     components: { IconsComp },
   }),
