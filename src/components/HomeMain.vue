@@ -31,13 +31,11 @@
   z-index: 2;
   display: flex;
   @include adaptiveValue("max-height", 400, 250);
-  @include adaptiveValue("padding-top", 40, 20);
-  @include adaptiveValue("padding-bottom", 40, 20);
+  @include adaptiveValue("padding-top", 20, 5);
+  @include adaptiveValue("padding-bottom", 20, 5);
   background-color: #f2f2f2;
-  border: 1px solid green;
 
   // .main__container
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -51,7 +49,6 @@
   }
 
   // .main__title
-
   &__title {
     text-align: center;
     font-family: "Iinter";
@@ -85,11 +82,6 @@
       }
     }
   }
-
-  // .main__buttons
-
-  &__buttons {
-  }
 }
 .buttons-main {
   // .buttons-main__button
@@ -100,8 +92,6 @@
       padding: rem(10) rem(40);
     }
   }
-}
-.button {
 }
 </style>
 <script>

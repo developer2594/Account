@@ -3,17 +3,12 @@
     <div class="special__container">
       <div class="special__whats">Что мы делаем?</div>
       <h2 class="special__title">Наша специализация</h2>
-      <div class="special__technologi technologi-special">
-        <div class="technologi-special__work">Вёрстка сайтов</div>
-        <div class="technologi-special__icons">
-          <IconsComp v-for="icon in icons" :key="icon.id" :specIcon="icon" />
+      <div class="special__block block-special">
+        <div class="block-special__work">
+          Front-end разработка и вёрстка сайтов и технологии
         </div>
-        <div class="technologi-special__text">
-          Вёрстка сайтов из макета <span>figma</span> , <span>Adobe</span>
-          <span>photoShop</span>, <span>Adobe X Designe</span>. Надёжная,
-          адаптивная, кроссбраузерная, вёрстка на <span>HTML</span>,
-          <span>CSS</span>, <span>SCSS</span>, и <span>JAVASCRIPT</span> в сроки
-          и приемлемые цены
+        <div class="block-special__carts carts-block">
+          <IconsComp v-for="icon in icons" :key="icon.id" :specIcon="icon" />
         </div>
       </div>
     </div>
@@ -23,55 +18,47 @@
 <style lang="scss" scoped>
 @import "@/scss/style.scss";
 .special {
-  @include adaptiveValue("padding-top", 60, 20);
-  @include adaptiveValue("padding-bottom", 60, 20);
+  @include adaptiveValue("padding-top", 30, 5);
+  @include adaptiveValue("padding-bottom", 30, 2);
   &__container {
-    padding: rem(40) rem(30);
+    @include adaptiveValue("padding", 30, 10);
   }
   //.special-whats
   &__whats {
     font-size: rem(18);
-    line-height: em(21);
     color: $textColor;
   }
   //.special-title
   &__title {
     @include adaptiveValue("font-size", 45, 24);
-    line-height: em(55);
-  }
-  //.special-technologi
-  &__technologi {
+    line-height: em(30);
   }
 }
 
-.technologi-special {
-  // .technologi-special__title
+.block-special {
+  // .block-special__title
 
   &__work {
     font-size: rem(22);
-    line-height: em(34);
+    line-height: em(16);
+    &:not(:last-child) {
+      margin-bottom: em(15);
+    }
   }
+  // .block-special__icons
 
-  // .technologi-special__icons
-
-  &__icons {
-    display: flex;
-    gap: rem(30);
-    align-items: center;
+  &__carts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    justify-items: center;
+    gap: rem(20);
     margin-bottom: rem(30);
     box-shadow: 0 5px 15px rgba(49, 49, 49, 0.5);
     border-radius: 5px;
     background-color: #fff;
-    text-align: left;
     padding: rem(20);
-  }
-  &__text {
-    font-size: rem(22);
-    line-height: em(22);
-    color: $textColor;
-    & span {
-      font-weight: 700;
-      color: $mainColor;
+    @media (max-width: em(620)) {
+      grid-template-rows: 1fr;
     }
   }
 }
@@ -92,37 +79,37 @@ export default {
         id: "ic2",
         name: "psd.svg",
         alt: "icon psd",
-        text: "psd",
+        text: "PSD формат представляет из себя изображение, которое было сформировано в программе Adobe Photoshop, являющейся одним из самых многофункциональных и популярных графических редакторов на сегодняшний день.",
       },
       {
         id: "ic3",
         name: "xd.svg",
         alt: "icon xd",
-        text: "xd",
+        text: "Adobe XD можно назвать неким аналогом фотошопа для осуществления работ по прототипированию. По сути, сейчас эта программа является наиболее быстрым, надежным решением для UX-дизайна, которое подходит как маленьким, так и большим компаниям со штатом сотрудников свыше 10 тысяч человек.",
       },
       {
         id: "ic4",
         name: "html.svg",
         alt: "icon html",
-        text: "html",
+        text: "HTML (от английского HyperText Markup Language) — это язык гипертекстовой разметки текста. Он нужен, чтобы размещать на веб-странице элементы: текст, картинки, таблицы и видео.",
       },
       {
         id: "ic5",
         name: "css.svg",
         alt: "icon css",
-        text: "css",
+        text: "CSS используется для определения стилей (правил) оформления документов — включая дизайн, вёрстку и вариации макета для различных устройств и размеров экрана. У такого способа форматирования несколько достоинств:",
       },
       {
         id: "ic6",
         name: "sass.svg",
         alt: "icon sass",
-        text: "sass",
+        text: "SASS - это препроцессор, позволяющий писать код для стилей CSS, используя всевозможные: переменные, циклы, миксины, функции и многое другое. Многие слышали про SASS и SCSS и думают что это разные технологии. На самом деле, обе технологии являются один и тем же и отличаются лишь синтаксисом написания.",
       },
       {
         id: "ic7",
         name: "js.svg",
         alt: "icon js",
-        text: "js",
+        text: "JavaScript — это язык программирования, который используют для написания frontend- и backend-частей сайтов, а также мобильных приложений. Часто в текстах и обучающих материалах название языка сокращают до JS. Это язык программирования высокого уровня, то есть код на нем понятный и хорошо читается.",
       },
     ],
   }),

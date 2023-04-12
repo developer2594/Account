@@ -36,12 +36,9 @@
   position: relative;
   background-color: $headerBG;
   z-index: 5;
-  @include adaptiveValue("padding-top", 20, 5);
-  @include adaptiveValue("padding-bottom", 20, 5);
-  border: 1px solid green;
+  @include adaptiveValue("padding-top", 15, 5);
 
   // .header__container
-
   &__container {
     display: flex;
     justify-content: space-between;
@@ -52,7 +49,6 @@
   }
 
   // .header__logo
-
   &__logo {
     width: 45px;
     height: 45px;
@@ -70,7 +66,6 @@
   }
 
   // .header__menu
-
   &__menu {
     @media all and (max-width: $mobile) {
       position: absolute;
@@ -78,6 +73,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      height: 80vh;
       right: -101%;
       top: 99%;
       padding: 15px;
@@ -94,7 +90,6 @@
   }
 
   // .header__circle
-
   &__circle {
     position: absolute;
     bottom: 0;
@@ -108,7 +103,6 @@
 }
 .menu-header {
   // .menu-header__list
-
   &__list {
     display: flex;
     gap: 1.875rem;

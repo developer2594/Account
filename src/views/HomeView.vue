@@ -2,12 +2,14 @@
   <HomeHeader :ScrinWidth="ScrinWidth" />
   <HomeMain :ScrinWidth="ScrinWidth" />
   <HomeSpec />
+  <FooterComp />
 </template>
 
 <script>
-import HomeHeader from "@/components/HomeHeader";
-import HomeMain from "@/components/HomeMain";
-import HomeSpec from "@/components/SpecializationMain";
+import HomeHeader from "@/components/HomeHeader.vue";
+import HomeMain from "@/components/HomeMain.vue";
+import HomeSpec from "@/components/SpecializationMain.vue";
+import FooterComp from "@/components/HomeFooter.vue";
 export default {
   props: {
     ScrinWidth: {
@@ -19,6 +21,7 @@ export default {
     HomeHeader,
     HomeMain,
     HomeSpec,
+    FooterComp,
   },
   methods() {
     console.log("homeView", this.ScrinWidth);
