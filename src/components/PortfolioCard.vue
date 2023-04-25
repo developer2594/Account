@@ -1,16 +1,56 @@
 <template>
   <article class="body-portfolio__card body-portfolio">
-    <a target="_blank" href="./relvise.html" class="body-portfolio__image">
-      <span
-        class="body-portfolio__image-ibg product-card__item__image-ibg_contain"
-      >
-        <picture
-          ><source srcset="img/main/relvise.webp" type="image/webp" />
-          <img src="img/main/relvise.jpg?_v=1657995332903" alt="Картинка"
-        /></picture>
-      </span>
-    </a>
-    <div class="body-portfolio__title"><span></span> relvise</div>
-    <a target="_blank" href="" class="body-portfolio__link"></a>
+    <router-link
+      target="_blank"
+      :to="PortCards.portUrl"
+      class="body-portfolio__portUrl"
+    >
+      <img
+        :src="require('../assets/portfolio-card/' + PortCards.src)"
+        :alt="PortCards.alt"
+      />
+    </router-link>
+    <div class="body-portfolio__title">
+      <span>{{ PortCards.lable }}</span> {{ PortCards.name }}
+    </div>
+    <router-link
+      target="_blank"
+      :to="PortCards.url"
+      class="body-portfolio__link"
+      >{{ PortCards.urlName }}</router-link
+    >
   </article>
 </template>
+
+<script>
+export default {
+  props: {
+    PortCards: {
+      src: {
+        type: String,
+        required: true,
+      },
+      name: {
+        type: String,
+        required: true,
+      },
+      lable: {
+        type: String,
+      },
+      portUrl: {
+        type: String,
+        required: true,
+      },
+      url: {
+        type: String,
+      },
+      urlName: { type: String },
+      alt: {
+        type: String,
+        required: true,
+        default: "image",
+      },
+    },
+  },
+};
+</script>
