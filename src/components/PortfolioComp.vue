@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PortCard from "@/components/PortfolioComp.vue";
+import PortCard from "@/components/PortfolioCard.vue";
 
 export default {
   data: () => ({
