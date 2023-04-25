@@ -2,6 +2,7 @@
   <HomeHeader :ScrinWidth="ScrinWidth" />
   <HomeMain :ScrinWidth="ScrinWidth" />
   <HomeSpec />
+  <PortFolio />
   <FooterComp />
 </template>
 
@@ -9,6 +10,7 @@
 import HomeHeader from "@/components/HomeHeader.vue";
 import HomeMain from "@/components/HomeMain.vue";
 import HomeSpec from "@/components/SpecializationMain.vue";
+import PortFolio from "@/components/portfolioComp.vue";
 import FooterComp from "@/components/HomeFooter.vue";
 export default {
   props: {
@@ -21,6 +23,7 @@ export default {
     HomeHeader,
     HomeMain,
     HomeSpec,
+    PortFolio,
     FooterComp,
   },
   methods() {
