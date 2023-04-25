@@ -2,12 +2,16 @@
   <div class="portfolio">
     <div class="portfolio__container">
       <h2 class="portfolio__title">Наше портфолио</h2>
-      <div class="portfolio__body">body</div>
+      <div class="portfolio__body">
+        <PortCard />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import PortCard from "@/components/PortfolioComp.vue";
+
 export default {
   data: () => ({
     portfolioCard: [
@@ -22,5 +26,8 @@ export default {
       },
     ],
   }),
+  components: {
+    PortCard,
+  },
 };
 </script>

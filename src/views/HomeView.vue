@@ -10,7 +10,7 @@
 import HomeHeader from "@/components/HomeHeader.vue";
 import HomeMain from "@/components/HomeMain.vue";
 import HomeSpec from "@/components/SpecializationMain.vue";
-import PortFolio from "@/components/portfolioComp.vue";
+import PortFolio from "@/components/PortfolioComp.vue";
 import FooterComp from "@/components/HomeFooter.vue";
 export default {
   props: {
